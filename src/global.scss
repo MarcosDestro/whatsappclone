@@ -39,6 +39,21 @@ body {
             display: flex;
         }
     }
+
+    .chatlist {
+        flex: 1;
+        background-color: #fff;
+        overflow-y: auto; //barra de rolagem caso muitos chats
+    }
+
+    .chatlist::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    .chatlist::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
 }
 
 .header-btn {
@@ -83,5 +98,5 @@ body {
 }
 
 .contentarea {
-
+    flex: 1;
 }
