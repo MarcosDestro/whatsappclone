@@ -56,6 +56,8 @@ export function App() {
             chatlist.map((item, key)=>(
               <ChatListItem 
                 key={key}
+                data={item} // Envia o objeto com as informações
+                active={activeChat.chatId === chatlist[key].chatId} // Se o id é o mesmo do loop, marca ativo
                 onClick={()=>setActiveChat(chatlist[key])}
               />
             ))

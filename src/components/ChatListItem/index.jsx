@@ -1,19 +1,18 @@
 import React from "react"
-import avatar from '../../assets/avatar.png'
 
 import './style.scss';
 
-export function ChatListItem({onClick}) {
+export function ChatListItem({onClick, active, data}) {
     return (
         <div
-            className="chatlistitem"
+            className={`chatlistitem ${active ? 'active' : ''}`}
             onClick={onClick}
             >
-            <img className="avatar" src={avatar} />
+            <img className="avatar" src={data.image} />
             <div className="lines">
                 <div className="line">
                     <div className="name">
-                        Marcos Destro
+                        { data.title }
                     </div>
                     <div className="date">
                         19:00
